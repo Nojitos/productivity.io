@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .body {
+            background-color: #030304;
+        }
+
+        h1 {
+        font-family: 'PP Neue Montreal', sans-serif;
+        color: white;
+        }
+
+        .form {
+        font-family: 'PP Neue Montreal', sans-serif;
+        --bg-light: #efefef;
+        --bg-dark: #707070;
+        --clr: #58bc82;
+        --clr-alpha: #9c9c9c60;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        width: 100%;
+        max-width: 300px;
+        }
+
+        .form .input-span {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        }
+
+        .form input[type="email"],
+        .form input[type="password"] {
+        border-radius: 0.5rem;
+        padding: 1rem 0.75rem;
+        width: 100%;
+        border: none;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: var(--clr-alpha);
+        outline: 2px solid var(--bg-dark);
+        }
+
+        .form input[type="email"]:focus,
+        .form input[type="password"]:focus {
+        outline: 2px solid var(--clr);
+        }
+
+        .label {
+        align-self: flex-start;
+        color: var(--clr);
+        font-weight: 600;
+        }
+
+        .form .submit {
+        padding: 1rem 0.75rem;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        border-radius: 3rem;
+        background-color: var(--bg-dark);
+        color: var(--bg-light);
+        border: none;
+        cursor: pointer;
+        transition: all 300ms;
+        font-weight: 600;
+        font-size: 0.9rem;
+        }
+
+        .form .submit:hover {
+        background-color: var(--clr);
+        color: var(--bg-dark);
+        }
+
+        .span {
+        text-decoration: none;
+        color: var(--bg-dark);
+        }
+
+        .span a {
+        color: var(--clr);
+        }
+
+        .navigation {
+        background: #030304;
+    }
+
+        /* From Uiverse.io by adamgiebl */ 
+        .seconnecter {
+        --green: #1BFD9C;
+        font-size: 15px;
+        padding: 0.7em 2.7em;
+        letter-spacing: 0.06em;
+        position: relative;
+        font-family: inherit;
+        border-radius: 0.6em;
+        overflow: hidden;
+        transition: all 0.3s;
+        line-height: 1.4em;
+        border: 2px solid var(--green);
+        background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+        color: var(--green);
+        box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+        }
+
+        .seconnecter:hover {
+        color: #82ffc9;
+        box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+        }
+
+        .seconnecter:before {
+        content: "";
+        position: absolute;
+        left: -4em;
+        width: 4em;
+        height: 100%;
+        top: 0;
+        transition: transform .4s ease-in-out;
+        background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+        }
+
+        .seconnecter:hover:before {
+        transform: translateX(15em);
+        }
+
+        /* From Uiverse.io by biswacpcode */ 
+        .logo {
+        color: white;
+        text-decoration: none;
+        font-size: 25px;
+        border: none;
+        background: none;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        }
+
+        .logo::before {
+        margin-left: auto;
+        }
+
+        .logo::after, .logo::before {
+        content: '';
+        width: 0%;
+        height: 2px;
+        background: #00ffc8;
+        display: block;
+        transition: 0.5s;
+        }
+
+        .logo:hover::after, .logo:hover::before {
+        width: 100%;
+        }
+
+    </style>
+</head>
+
+<body class="body">
+    <div class="navigation flex justify-between">
+
+        <button class="logo mx-10"><a href="Homepage.html">Productivity.io</a></button>
+
+        <nav  class="navigation flex justify-end">
+
+          <button class="seconnecter my-4 mr-5"><a href="login.html">Se connecter</a></button>
+          
+        </nav>
+
+</div>
+
+<div class="flex justify-center my-20">
+  <form class="form">
+    <span class="input-span">
+        <h1 class="flex justify-center text-xl my-4">Créer un compte</h1>
+      <label for="email" class="label">Addresse E-Mail*</label>
+      <input type="email" name="email" id="email"
+    /></span>
+    <span class="input-span">
+      <label for="password" class="label">Mot de passe*</label>
+      <input type="password" name="password" id="password"
+    /></span>
+    <span class="input-span">
+        <label for="password" class="label">Confirmer le mot de passe*</label>
+        <input type="password" name="password" id="password"
+      /></span>
+    <button class="submit justify-center" type="submit" value="Accéder"><a href="dashboard.html">Accéder</a></button>
+    <span class="span">Vous avez déjà un compte? 
+      <a href="login.html">Se connecter</a></span>
+  </form>
+</div>
+</body>
+</html>

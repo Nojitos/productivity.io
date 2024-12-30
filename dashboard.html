@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+          <style>
+
+/* From Uiverse.io by Pravins01 */ 
+.card1 {
+  position: relative;
+  width: 380px;
+  height: 508px;
+  background-color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+  gap: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: white;
+}
+
+.card1::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  left: -5px;
+  margin: auto;
+  width: 395px;
+  height: 528px;
+  border-radius: 10px;
+  background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100% );
+  z-index: -10;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card1::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  transform: translate3d(0, 0, 0) scale(0.95);
+  filter: blur(20px);
+}
+
+.heading {
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card1 p:not(.heading) {
+  font-size: 14px;
+}
+
+.card1 p:last-child {
+  color: #e81cff;
+  font-weight: 600;
+}
+
+.card1:hover::after {
+  filter: blur(30px);
+}
+
+.card1:hover::before {
+  transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+}
+
+
+.card {
+  width: 100%;
+  max-width: 380px;
+  height: 70px;
+  background: #353535;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  backdrop-filter: blur(10px);
+  transition: 0.5s ease-in-out;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.img {
+  width: 50px;
+  height: 50px;
+  margin-left: 10px;
+  border-radius: 10px;
+  background: linear-gradient(#d7cfcf, #9198e5);
+}
+
+.card:hover > .img {
+  transition: 0.5s ease-in-out;
+  background: linear-gradient(#9198e5, #712020);
+}
+
+.textBox {
+  width: calc(100% - 90px);
+  margin-left: 10px;
+  color: white;
+  font-family: 'Poppins' sans-serif;
+}
+
+.textContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.span {
+  font-size: 10px;
+}
+
+.h1 {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.p {
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+
+
+                .animated-button {
+                position: relative;
+                display: flex;
+                align-items: center;
+                gap: 4px;
+                padding: 4px 36px;
+                border: 4px solid;
+                border-color: transparent;
+                font-size: 16px;
+                background-color: inherit;
+                border-radius: 100px;
+                font-weight: 600;
+                color: greenyellow;
+                box-shadow: 0 0 0 2px greenyellow;
+                cursor: pointer;
+                overflow: hidden;
+                transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                .animated-button svg {
+                position: absolute;
+                width: 24px;
+                fill: greenyellow;
+                z-index: 9;
+                transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                .animated-button .arr-1 {
+                right: 16px;
+                }
+
+                .animated-button .arr-2 {
+                left: -25%;
+                }
+
+                .animated-button .circle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 20px;
+                height: 20px;
+                background-color: greenyellow;
+                border-radius: 50%;
+                opacity: 0;
+                transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                .animated-button .text {
+                position: relative;
+                z-index: 1;
+                transform: translateX(-12px);
+                transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+                }
+
+                .animated-button:hover {
+                box-shadow: 0 0 0 12px transparent;
+                color: #212121;
+                border-radius: 12px;
+                }
+
+                .animated-button:hover .arr-1 {
+                right: -25%;
+                }
+
+                .animated-button:hover .arr-2 {
+                left: 16px;
+                }
+
+                .animated-button:hover .text {
+                transform: translateX(12px);
+                }
+
+                .animated-button:hover svg {
+                fill: #212121;
+                }
+
+                .animated-button:active {
+                scale: 0.95;
+                box-shadow: 0 0 0 4px greenyellow;
+                }
+
+                .animated-button:hover .circle {
+                width: 220px;
+                height: 220px;
+                opacity: 1;
+                }
+
+              .body {
+                  background-color: #030304;
+              }
+      
+              .form {
+              font-family: 'PP Neue Montreal', sans-serif;
+              --bg-light: #efefef;
+              --bg-dark: #707070;
+              --clr: #58bc82;
+              --clr-alpha: #9c9c9c60;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 1rem;
+              width: 100%;
+              max-width: 300px;
+              }
+      
+              .form .input-span {
+              width: 100%;
+              display: flex;
+              flex-direction: column;
+              gap: 0.5rem;
+              }
+      
+              .form input[type="email"],
+              .form input[type="password"] {
+              border-radius: 0.5rem;
+              padding: 1rem 0.75rem;
+              width: 100%;
+              border: none;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              background-color: var(--clr-alpha);
+              outline: 2px solid var(--bg-dark);
+              }
+      
+              .form input[type="email"]:focus,
+              .form input[type="password"]:focus {
+              outline: 2px solid var(--clr);
+              }
+      
+              .label {
+              align-self: flex-start;
+              color: var(--clr);
+              font-weight: 600;
+              }
+      
+              .form .submit {
+              padding: 1rem 0.75rem;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              gap: 0.5rem;
+              border-radius: 3rem;
+              background-color: var(--bg-dark);
+              color: var(--bg-light);
+              border: none;
+              cursor: pointer;
+              transition: all 300ms;
+              font-weight: 600;
+              font-size: 0.9rem;
+              }
+      
+              .form .submit:hover {
+              background-color: var(--clr);
+              color: var(--bg-dark);
+              }
+      
+              .span {
+              text-decoration: none;
+              color: var(--bg-dark);
+              }
+      
+              .span a {
+              color: var(--clr);
+              }
+      
+              .navigation {
+              background: #030304;
+          }
+      
+          /* From Uiverse.io by adamgiebl */ 
+          .seconnecter {
+          --green: #1BFD9C;
+          font-size: 15px;
+          padding: 0.7em 2.7em;
+          letter-spacing: 0.06em;
+          position: relative;
+          font-family: inherit;
+          border-radius: 0.6em;
+          overflow: hidden;
+          transition: all 0.3s;
+          line-height: 1.4em;
+          border: 2px solid var(--green);
+          background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+          color: var(--green);
+          box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+          }
+      
+          .seconnecter:hover {
+          color: #82ffc9;
+          box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+          }
+      
+          .seconnecter:before {
+          content: "";
+          position: absolute;
+          left: -4em;
+          width: 4em;
+          height: 100%;
+          top: 0;
+          transition: transform .4s ease-in-out;
+          background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+          }
+      
+          .seconnecter:hover:before {
+          transform: translateX(15em);
+          }
+      
+          /* From Uiverse.io by biswacpcode */ 
+          .logo {
+          color: white;
+          text-decoration: none;
+          font-size: 25px;
+          border: none;
+          background: none;
+          font-weight: 600;
+          font-family: 'Poppins', sans-serif;
+          }
+      
+          .logo::before {
+          margin-left: auto;
+          }
+      
+          .logo::after, .logo::before {
+          content: '';
+          width: 0%;
+          height: 2px;
+          background: #00ffc8;
+          display: block;
+          transition: 0.5s;
+          }
+      
+          .logo:hover::after, .logo:hover::before {
+          width: 100%;
+          }
+
+          
+      
+          </style>
+      </head>
+<body class="body">
+    <div class="navigation flex justify-between">
+        <button class="logo mx-10 my-4"><a href="dashboard.html">Vous êtes sur votre Dashboard</a></button>
+    </div>
+    <button class="animated-button mx-10"><a href="Homepage.html"></a>
+      <svg viewBox="0 0 24 24" class="arr-2" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+        ></path>
+      </svg>
+      <span class="text">Retourner à l'accueil</span>
+      <span class="circle"></span>
+      <svg viewBox="0 0 24 24" class="arr-1" xmlns="http://www.w3.org/2000/svg">
+        <path
+          d="M16.1716 10.9999L10.8076 5.63589L12.2218 4.22168L20 11.9999L12.2218 19.778L10.8076 18.3638L16.1716 12.9999H4V10.9999H16.1716Z"
+        ></path>
+      </svg>
+    </button>
+
+    <div class="">
+        <div class="card mx-10 my-5">
+            <div class="img"></div>
+            <div class="textBox">
+              <div class="textContent">
+                <p class="h1">Productivity.io</p>
+                <span class="span">12 min ago</span>
+              </div>
+              <p class="p">C'est l'heure de travailler!</p>
+            <div>
+          </div></div></div>
+    </div>
+
+<div class="card1 mx-11 ">
+    <iframe width="350" height="600" src="https://www.youtube.com/embed/jfKfPfyJRdk?si=xvIXhLHPBaZuX9RZ&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  <p class="heading">
+    Pour vous concentrer
+  </p>
+  <p>
+    Ecoutez :
+  </p>
+  <p>Lofi Girl
+</p></div>
+
+
+    
+    
+</body>
+</html>

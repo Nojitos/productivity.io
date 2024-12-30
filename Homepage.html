@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Productivity.io</title>
+    <script src="style.css"></script>
+    <style>
+
+    .body {
+        font-family: 'PP Neue Montreal', sans-serif;
+    }
+    .main-section {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ecf0f1;
+    }
+
+    .main-section iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    .main-section h1 {
+      position: relative;
+      z-index: 2;
+      font-family: 'PP Neue Montreal', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      color: rgb(255, 255, 255);
+      font-size: 70px;
+      line-height: 70px;
+      text-align: center;
+    }
+
+    .second-section {
+      background-color: rgba(3,3,4,255);
+      font-family: 'PP Neue Montreal', sans-serif;
+    }
+
+    .second-section h2 {
+      position: relative;
+      font-family: 'PP Neue Montreal', sans-serif;
+      font-style: normal;
+      color: rgb(255, 255, 255)
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 70px;
+      text-align: center;
+    }
+
+    .animated-text {
+    animation: textAnimation 3s infinite alternate;
+    }
+
+    @keyframes textAnimation {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    }
+
+    .navigation {
+        background: #030304;
+    }
+
+
+    .bg-colorpardefault {
+      background: #030304;
+    }
+    /* From Uiverse.io by adamgiebl */ 
+    .commencer {
+    --green: #1BFD9C;
+    font-size: 15px;
+    padding: 0.7em 2.7em;
+    letter-spacing: 0.06em;
+    position: relative;
+    font-family: inherit;
+    border-radius: 0.6em;
+    overflow: hidden;
+    transition: all 0.3s;
+    line-height: 1.4em;
+    border: 2px solid var(--green);
+    background: linear-gradient(to right, rgba(27, 253, 156, 0.1) 1%, transparent 40%,transparent 60% , rgba(27, 253, 156, 0.1) 100%);
+    color: var(--green);
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.4), 0 0 9px 3px rgba(27, 253, 156, 0.1);
+    }
+
+    .commencer:hover {
+    color: #82ffc9;
+    box-shadow: inset 0 0 10px rgba(27, 253, 156, 0.6), 0 0 9px 3px rgba(27, 253, 156, 0.2);
+    }
+
+    .commencer:before {
+    content: "";
+    position: absolute;
+    left: -4em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform .4s ease-in-out;
+    background: linear-gradient(to right, transparent 1%, rgba(27, 253, 156, 0.1) 40%,rgba(27, 253, 156, 0.1) 60% , transparent 100%);
+    }
+
+    .commencer:hover:before {
+    transform: translateX(15em);
+    }
+
+    /* From Uiverse.io by biswacpcode */ 
+    .logo {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    background: none;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    }
+
+    .logo::before {
+    margin-left: auto;
+    }
+
+    .logo::after, .logo::before {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #00ffc8;
+    display: block;
+    transition: 0.5s;
+    }
+
+    .logo:hover::after, .logo:hover::before {
+    width: 100%;
+    }
+
+  .seconnecter {
+    width: 160px;
+    height: 60px;
+    border: 3px solid #315cfd;
+    border-radius: 45px;
+    transition: all 0.3s;
+    cursor: pointer;
+    background: white;
+    font-size: 1.1em;
+    font-weight: 550;
+  }
+
+  .seconnecter:hover {
+    background: #315cfd;
+    color: white;
+    font-size: 1.4em;
+  }
+
+
+    </style>
+</head>
+    
+<body class="body bg-colorpardefault">
+
+        <div class="navigation flex justify-between">
+
+            <button class="logo mx-10"><a href="Homepage.html">Productivity.io</a></button>
+
+            <nav  class="navigation flex justify-end">
+
+              <button class="seconnecter my-4 mr-5"><a href="login.html">Se connecter</a></button>
+              
+                
+                <button class="commencer my-4 mr-10"><a href="createaccount.html">Commencer!</a></button>
+            </nav>
+
+            </div>
+        <div class="main-section">
+            <iframe src='https://my.spline.design/chips-dd7b5600cfb4ae29368f49b862701d04/' frameborder='0' width='100%' height='100%'></iframe>
+            <h1 class=" animated-text">Boostez votre vie avec Productivity</h1>
+        </div>
+        
+    </div>
+
+
+
+    
+</body>
+</html>
